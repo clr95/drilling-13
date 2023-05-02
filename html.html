@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pub Restaurant Nimrodel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/estilos/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="icon" href="/assets/img/n.png" sizes="32x32" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/funcion.js"></script> 
+  <style>
+    .card {
+      position: relative;
+    }
+      
+    .card-img-link {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+      
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+      
+    .modal-imagen {
+      width: 100%;
+      height: auto;
+    }
+      
+    .card-body {
+      font-size: xx-large;
+    }
+      
+    #caja1, #caja2, #caja3 {
+      border-radius: 10px; 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px; 
+      background-color: #FFFFFF; 
+      margin-top: 20px;     
+      display: inline-block;
+      justify-content: center;
+    }
+      
+    #img1, #img2, #img3 {
+      margin: 0 auto;
+      width: 100%;
+      height: 20rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="caja1">
+    <a href="#" class="card-img-link" data-toggle="modal" data-target="#imagenModal" data-texto="Lorem ipsum dolor sit amet consectetur adipisicing elit." onclick="showModal(this)">
+      <img src="/assets/img/bebidas.jpg" id="img1" width="100%" class="card-img-top">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Bebidas</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </div>
+  <div class="card" id="caja2">
+    <a href="#" class="card-img-link" data-toggle="modal" data-target="#imagenModal" data-texto="Lorem ipsum dolor sit amet consectetur adipisicing elit." onclick="showModal(this)">
+      <img src="/assets/img/tablas.jpg" id="img2" width="100%"class="card-img-top">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Tablas</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </div>
+  <div class="card" id="caja3">
+    <a href="#" class="card-img-link" data-toggle="modal" data-target="#imagenModal" data-texto="Lorem ipsum dolor sit amet consectetur adipisicing elit." onclick="showModal(this)">
+      <img src="/assets/img/shop.jpeg" id="img3" width="100%" class="card-img-top">
+    </a>
+    <div class="card-body">
+      <h5 class="card-title">Shop</h5>
+      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="imagenModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="" class="modal-imagen" width="100%">
+          <h5 class="modal-titulo"></h5>
+          <p class="modal-descripcion"></p>
+          <p class="modal-texto"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+  function showModal(link) {
+    let src = $(link).children("img").attr("src");
+    let texto = $(link).data("texto");
+    let titulo = $(link).closest('.card').find('.card-title').text();
+    let descripcion = $(link).closest('.card').find('.card-text').text();
+    $(".modal-imagen").attr("src", src);
+    $(".modal-titulo").text(titulo);
+    $(".modal-descripcion").text(descripcion);
+    $('#imagenModal').modal('show');
+  }
+  </script>
+     </script>
+   
+     <!-- Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+</body>
+</html>

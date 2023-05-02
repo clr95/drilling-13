@@ -1,0 +1,193 @@
+body {
+  background-size: 100%;
+  color: #ea4444;
+  font: 18px Arial, Tahoma;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Courier New', Courier;
+  font-size: 150%;
+}
+
+h2 {
+  text-align: center;
+  color: #111111;
+  font-style: oblique;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Courier New', Courier;
+  font-size: large;
+}
+
+header {
+  background-image: url("/assets/img/fondo.jpg");
+  background-size: 30rem;
+  height: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+}
+  
+.card-img-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+  
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+.modal-imagen {
+  width: 100%;
+  height: 30rem;
+}
+  
+.card-body {
+  font-size: xx-large;
+}
+  
+#caja1, #caja2, #caja3 {
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px; 
+  background-color: #FFFFFF; 
+  margin-top: 20px;     
+  display: inline-block;
+  justify-content: center;
+}
+  
+#img1, #img2, #img3 {
+  margin: 0 auto;
+  width: 100%;
+  height: 20rem;
+}
+p {
+  text-align: center;
+  font-style: oblique;
+  color: rgb(53, 51, 51);
+  font-size: medium;
+}
+
+.carousel-item {
+  height: 250px;
+}
+
+.icon {
+  height: 16px;
+}
+
+.exito {
+  height: 200px;
+  text-align: center;
+}
+
+.li {
+  size: 10px;
+}
+
+div {
+  font-size: medium;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-image: url("/assets/img/fondo.jpg");
+  background-size: auto;
+  height: 250px;
+  color: #d07a74;
+  position: relative;
+  font-size: small;
+}
+
+.n {
+  text-align: left;
+  height: 200px;
+}
+
+label {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #idFormulario1 {
+    display: none;
+  }
+  #idFormulario2 {
+    display: none;
+  }
+  
+}
+@media (min-width: 200px) and (max-width: 992px) {
+  header {
+    height: 20%;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .card-img-top {
+    width: 70%;
+    height: 20rem;
+  }
+
+
+  .carousel-item {
+    height: 20%;
+  }
+
+  footer {
+    height: 250px;
+  }
+  #idFormulario1 {
+    display: none;
+  }
+  #idFormulario2 {
+    display: none;
+  }
+}
+
+@media (min-width: 993px) {
+  navbar {
+    justify-content: center;
+    align-items: center;
+    margin-left: 5em;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .btn-gap-2 {
+    display: none;
+  }
+
+  nav ul {
+    list-style: none;
+    overflow: hidden;
+  }
+
+  nav ul li {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+}
